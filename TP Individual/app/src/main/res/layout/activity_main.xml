@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="263dp"
+        android:layout_height="48dp"
+        android:fontFamily="sans-serif"
+        android:text="5 de Maio"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="425dp"
+        android:layout_height="204dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="100dp">
+
+        <RelativeLayout
+            android:layout_width="408dp"
+            android:layout_height="250dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/nome_compromisso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/person_photo"
+                android:text="Nome do compromisso"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/hora_compromisso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nome_compromisso"
+                android:ems="10"
+                android:inputType="time" />
+
+            <Button
+                android:id="@+id/editar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hora_compromisso"
+                android:layout_marginLeft=""
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Editar" />
+
+            <Button
+                android:id="@+id/excluir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hora_compromisso"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/editar"
+                android:padding="10dp"
+                android:text="Excluir" />
+
+            <Button
+                android:id="@+id/feito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hora_compromisso"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/excluir"
+                android:padding="10dp"
+                android:text="Feito" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="89dp"
+        android:layout_height="75dp"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_menu_add"
+        tools:layout_editor_absoluteX="306dp"
+        tools:layout_editor_absoluteY="626dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
